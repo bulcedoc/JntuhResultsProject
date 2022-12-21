@@ -1,0 +1,18 @@
+{% load static %}
+<script src="{% static '#' %}"></script>
+<body style="display: flex; justify-content: center;">
+<h1>Signup Details</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+    <input type="submit" id="sub" onclick="run()">
+</form>
+<img src="load.gif" alt="Loading" id="img" style="display: none; background-repeat: no-repeat; background-size: auto; ">
+<script>
+    
+    function run(){
+        img.style = 'display: flex'
+
+    }
+</script>
+</body>

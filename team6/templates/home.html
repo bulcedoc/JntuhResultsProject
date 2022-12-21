@@ -1,0 +1,79 @@
+{% load static %}
+<script src="{% static '#' %}"></script>
+<body>
+
+<h1 id ="sub">Enter RollNumber</h1>
+<form id ="su" action="" method="post" class="dd">
+    {% csrf_token %}
+    {{form.roll}}
+    <input type="submit" class="b" onclick="run()" value="Go">
+</form>
+<img src="{% static 'load.gif' %}" alt="Loading" id="img" style="display: none; background-repeat: no-repeat; background-size: auto; ">
+<script>
+        
+    function run(){
+        
+        img.style = 'display: flex';
+        let n = document.getElementById("sub");
+        let m = document.getElementById("su");
+        n.style = 'display: none';
+        m.style = 'display: none';
+         
+    }
+</script>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+.b{
+    display: flex;
+        background-color: rgb(49, 228, 255);
+        margin: 10px;
+        border: none;
+        border-radius: 25px;
+        height: 50px;
+        width: 50px; 
+        font-size: 25px;
+        
+        
+         
+}
+    .d{
+        display: flex;
+        background-color: rgb(197, 197, 197);
+        margin: 10px;
+        border: none;
+        border-radius: 25px;
+        height: 50px;
+        width: 45%;
+    }
+    .dd{
+          display: flex;
+          padding: 50px;
+          
+          justify-content: center;
+         background-color: rgb(255, 255, 255);
+         width: 100%;
+         text-align: center;
+         flex-direction: row;
+        
+    }
+    body{
+        display: flex;
+        padding: 10%;
+        padding-top: 14%;
+        justify-content: center;
+        font-family:  monospace;
+        flex-direction: column;
+        align-items: center;
+        margin: 0;
+    }
+    img{
+
+        margin-top: -200px;
+        margin-bottom: -50px;
+    }
+    h1{
+        font-size: 40px
+    }
+    
+</style>
+</body>
